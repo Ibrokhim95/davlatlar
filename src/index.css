@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    --bgColor: hsl(0,0%,98%);
+    --fontcolor: hsl(200,15%,8%);
+    font-family: 'Nunito Sans',sans-serif;
+}
+
+.dark {
+    --bgColor: hsl(207,26%,17%);
+    --fontcolor: hsl(0,0%,98%);
+    background-color: var(--bgColor);
+    color: var(--fontcolor)!important;
+    --contrybgColor: hsl(209,23%,22%);
+}
+
+.container {
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+}
