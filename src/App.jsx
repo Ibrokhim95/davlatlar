@@ -3,6 +3,7 @@
 
 import React, { useEffect, useReducer, useState } from 'react'
 import { createContext } from 'react'
+import Spiner from './components/Spiner/Spiner'
 // import { Route, Routes } from 'react-router-dom'
 import About from './pages/About'
 import Home from './pages/Home'
@@ -39,6 +40,7 @@ const App = () => {
 
   const [country, setCountry] = useState({})
 
+  const [isLoading, setIsLoading] = useState(true)
 
   const [state, dispatch] = useReducer(reducer, initialValue)
 
@@ -47,10 +49,17 @@ const App = () => {
       const resp = await fetch(`https://restcountries.com/v3.1/all`) 
       const data = await resp.json()
       dispatch({type: "ALL_COUNTRIES", payload: data})
+      setTimeout(() => {
+        setIsLoading(false)
+      }, 1000);
     }
     getData()
   }, [])
   
+
+  if(isLoading) {
+    return <Spiner/>
+  }
 
   return (
     <CountriesContext.Provider value={[state, dispatch, country, setCountry]}>
