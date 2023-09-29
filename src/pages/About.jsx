@@ -20,7 +20,7 @@ const About = () => {
     <div  id="about" className='p-[30px] w-[100%] h-[100%] z-0 absolute hidden'>
       <button onClick={(e) => back(e)} className='border border-slate-300 rounded-md shadow-lg p-2 px-6 mb-[80px] mt-[30px] tracking-wider'>Back</button>
   
-      <div className="grid grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 gap-8">
         <div className="flag">
           <img className='h-[100%] w-[100%] block' src={`https://flagcdn.com/${country.cca2}.svg`} alt="" />
           {/* <img className='h-[100%] w-[100%] block' src={`https://flagcdn.com/jo.svg`} alt="" /> */}
@@ -44,6 +44,7 @@ const About = () => {
           </div>
         </div>
       </div>
+
     </div>
   )
 }

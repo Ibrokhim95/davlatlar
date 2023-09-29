@@ -59,7 +59,7 @@ const App = () => {
         <About/>
         <Home/>
 
-
+        <h1 className='text-center mb-12 mt-2'>This is made by <a className='text-blue-500' href="https://i-khamraev.netlify.app/">Ibrokhim</a></h1>
         {/* <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/about' element={<About/>}/>

@@ -4,10 +4,11 @@
 import React, { useContext } from 'react'
 import { CountriesContext } from '../App'
 
-const Forma = () => {
+const Forma = ({dark}) => {
 
     const [state, dispatch, country, setCountry] = useContext(CountriesContext)
 
+    const body = document.querySelector("body")
     const drop = document.getElementById("drop")
     const sort = document.getElementById("sort")
 
@@ -43,7 +44,7 @@ const Forma = () => {
         }
     }
 
-    
+        
     // console.log(state.countries.filter(item => item.region === "Asia"));
 
     return (
@@ -59,7 +60,7 @@ const Forma = () => {
                 </svg>
             </div>
 
-            <div id='drop' className="drop bg-white p-2 border border-slate-300 rounded-md shadow-lg absolute w-[100%] left-0 top-[110%] hidden">
+            <div id='drop' className={`drop p-2 border border-slate-300 rounded-md shadow-lg absolute w-[100%] lefta-0 top-[110%] hidden`}  style={{background: dark ? "#516278" : "#fff",}}>
                 <p onClick={(e) => filtered(e)} id='All'>All</p>
                 <p onClick={(e) => filtered(e)} id='Africa'>Africa</p>
                 <p onClick={(e) => filtered(e)} id='Americas'>America</p>

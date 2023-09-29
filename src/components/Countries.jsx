@@ -39,18 +39,18 @@ const Countries = () => {
         <div className='p-[30px]'>
             {/* <div className="bg-white/75 w-[100%] h-[100%] absolute"></div> */}
 
-            <div className='grid grid-cols-4 gap-[40px]'>
+            <div className='grid grid-cols-2 gap-[40px]'>
                 {state.countries.map((item, index) => (
                     <div onClick={() => aboutCountry(item)} key={index} className='border border-slate-300 rounded-md shadow-xl overflow-hidden'>
-                        <div className="flag h-[250px]">
+                        <div className="flag">
                             <img className='h-[100%] w-[100%]' src={item.flags.png} alt="" />
                         </div>
 
                         <div className='p-5'>
-                            <p className='text-xl font-bold py-2'>{item.name.common}</p>
-                            <p className='font-medium'><strong>Region:</strong> {item.region}</p>
-                            <p className='font-medium'><strong>Population:</strong> {item.population}</p>
-                            <p className='font-medium'><strong>Capital:</strong> {item.capital}</p>
+                            <p className='text-[16px] font-bold py-1 mb-2'>{item.name.common}</p>
+                            <p className='text-[12px] font-medium'><strong>Region:</strong> {item.region}</p>
+                            <p className='text-[12px] font-medium'><strong>Population:</strong> {item.population}</p>
+                            <p className='text-[12px] font-medium'><strong>Capital:</strong> {item.capital}</p>
                         </div>
                     </div>
                 ))}
