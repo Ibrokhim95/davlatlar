@@ -18,16 +18,16 @@ const About = () => {
 
   return (
     <div  id="about" className='p-[30px] w-[100%] h-[100%] z-0 absolute hidden'>
-      <button onClick={(e) => back(e)} className='border border-slate-300 rounded-md shadow-lg p-2 px-6 mb-[80px] mt-[30px] tracking-wider'>Back</button>
+      <button onClick={(e) => back(e)} className='border border-slate-300 rounded-md shadow-lg p-2 px-6 mb-[40px] mt-[10px] tracking-wider'>Back</button>
   
-      <div className="grid grid-cols-1 gap-8">
+      <div className="grid grid-cols-1 justify-items-center gap-8">
         <div className="flag">
-          <img className='h-[100%] w-[100%] block' src={`https://flagcdn.com/${country.cca2}.svg`} alt="" />
+          <img className='h-[100%] w-[100%] block md:max-w-2xl' src={`https://flagcdn.com/${country.cca2}.svg`} alt="" />
           {/* <img className='h-[100%] w-[100%] block' src={`https://flagcdn.com/jo.svg`} alt="" /> */}
         </div>
         <div className="info my-auto">
           <h1 className='text-4xl font-bold mb-3'>{country.commonName}</h1>
-          <div className='grid grid-cols-2'>
+          <div className='flex gap-12'>
             <div>
               <p className='font-medium'><strong>Region:</strong> {country.region}</p>
               <p className='font-medium'><strong>Sub Region:</strong> {country.subRegion}</p>
@@ -44,7 +44,7 @@ const About = () => {
           </div>
         </div>
       </div>
-
+      <h1 className='text-center mb-12 mt-2'>This is made by <a className='text-blue-500' href="https://i-khamraev.netlify.app/">Ibrokhim</a></h1>
     </div>
   )
 }

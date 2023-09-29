@@ -39,7 +39,7 @@ const Countries = () => {
         <div className='p-[30px]'>
             {/* <div className="bg-white/75 w-[100%] h-[100%] absolute"></div> */}
 
-            <div className='grid grid-cols-2 gap-[40px]'>
+            <div className='grid grid-cols-2 gap-[40px] md:grid-cols-3 lg:grid-cols-4'>
                 {state.countries.map((item, index) => (
                     <div onClick={() => aboutCountry(item)} key={index} className='border border-slate-300 rounded-md shadow-xl overflow-hidden'>
                         <div className="flag">

@@ -48,10 +48,10 @@ const Forma = ({dark}) => {
     // console.log(state.countries.filter(item => item.region === "Asia"));
 
     return (
-    <div className='container'>
-        <input onChange={(e) => handlerSearch(e)} value={state.query} className='w-[400px] p-4 border-slate-300 rounded-md shadow-lg' type="text" name="" id="" placeholder='Davlatni izlang...'/>
+    <div className='container mx-auto w-[100vw] flex flex-col gap-3 sm:flex-row sm:justify-between'>
+        <input onChange={(e) => handlerSearch(e)} value={state.query} className='w-[100%] sm:w-[400px] p-4 border-slate-300 rounded-md shadow-lg' type="text" name="" id="" placeholder='Davlatni izlang...'/>
 
-        <div onClick={() => dropDown()} className="dropDownCon p-4 border border-slate-300 rounded-md shadow-lg relative">
+        <div onClick={() => dropDown()} className="dropDownCon w-max p-2 border border-slate-300 rounded-md shadow-lg relative">
             <div className="dropDown flex gap-2">
                 <p id='sort'>Saralash</p>
 
@@ -60,7 +60,7 @@ const Forma = ({dark}) => {
                 </svg>
             </div>
 
-            <div id='drop' className={`drop p-2 border border-slate-300 rounded-md shadow-lg absolute w-[100%] lefta-0 top-[110%] hidden`}  style={{background: dark ? "#516278" : "#fff",}}>
+            <div id='drop' className={`drop p-2 border border-slate-300 rounded-md shadow-lg absolute w-[100%] left-0 top-[110%] hidden`}  style={{background: dark ? "#516278" : "#fff",}}>
                 <p onClick={(e) => filtered(e)} id='All'>All</p>
                 <p onClick={(e) => filtered(e)} id='Africa'>Africa</p>
                 <p onClick={(e) => filtered(e)} id='Americas'>America</p>

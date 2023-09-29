@@ -18,6 +18,8 @@ const Home = () => {
         <Title setDark={setDark}/>
         <Forma dark={dark}/>
         <Countries/>
+
+        <h1 className='text-center mb-12 mt-2'>This is made by <a className='text-blue-500' href="https://i-khamraev.netlify.app/">Ibrokhim</a></h1>
     </div>
   )
 }
